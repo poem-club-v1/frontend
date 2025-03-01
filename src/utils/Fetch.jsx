@@ -1,16 +1,55 @@
-const fetchPoems = async (queryParameter, sortOrder, fetchAmount) => {
-  //queryParameter => "number_of_likes", "date_created"...
-  //sortOrder => "desc", "asc"
-  //fetchAmount => how much items to fetch 10, 20...
+const filterPoems = async (likeSortOrder, categoryId, language, authorId) => {
+  try {
+    const baseUrl = "https://67befe3fb2320ee050123a7f.mockapi.io/api/poems";
+
+    const queryParams = new URLSearchParams();
+    if (likeSortOrder) queryParams.append("sortBy", "number_of_likes");
+    if (likeSortOrder) queryParams.append("order", likeSortOrder);
+    if (categoryId) queryParams.append("category_id", categoryId);
+    if (language) queryParams.append("language", language);
+    if (authorId) queryParams.append("author_id", authorId);
+
+    const url = `${baseUrl}?${queryParams.toString()}`;
+
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Failed to fetch poems data");
+    }
+    const data = await response.json();
+    console.log("data: ", data);
+  } catch (err) {
+    console.error(err);
+    throw new Error("Unable to load poems data.");
+  }
+};
+
+const fetchMostLikedPoems = async () => {
   try {
     const response = await fetch(
-      `https://67befe3fb2320ee050123a7f.mockapi.io/api/poems?sortBy=${queryParameter}&order=${sortOrder}&limit=${fetchAmount}`
+      `https://67befe3fb2320ee050123a7f.mockapi.io/api/poems?sortBy=number_of_likes&order=desc`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch poems data");
     }
     const data = await response.json();
-    const slicedData = data.slice(0, fetchAmount);
+    const slicedData = data.slice(0, 20);
+    console.log("data: ", slicedData);
+  } catch (err) {
+    console.error(err);
+    throw new Error("Unable to load poems data.");
+  }
+};
+
+const fetchLatestPoems = async () => {
+  try {
+    const response = await fetch(
+      `https://67befe3fb2320ee050123a7f.mockapi.io/api/poems?sortBy=date_created&order=desc`
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch poems data");
+    }
+    const data = await response.json();
+    const slicedData = data.slice(0, 20);
     console.log("data: ", slicedData);
   } catch (err) {
     console.error(err);
@@ -76,4 +115,11 @@ const changeUsername = async (userId, newUsername) => {
   }
 };
 
-export { fetchPoems, fetchUserPoems, fetchUserProfileData, changeUsername };
+export {
+  filterPoems,
+  fetchUserPoems,
+  fetchUserProfileData,
+  changeUsername,
+  fetchMostLikedPoems,
+  fetchLatestPoems,
+};
