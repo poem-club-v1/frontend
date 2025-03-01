@@ -1,0 +1,36 @@
+.login-title-container {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("../../../images/logInImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-title-text {
+  padding: 10%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  font-size: 40px;
+  color: #3e2723;
+}
+
+.login-title-text h1 {
+  text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 3px;
+}
+
+.login-title-text h2 {
+  color: #7b3d3d;
+  -webkit-text-stroke: 2px;
+}
