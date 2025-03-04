@@ -1,0 +1,8 @@
+.library-display {
+  width: 100%;
+  background-color: #9c9c9c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

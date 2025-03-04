@@ -17,6 +17,7 @@ const filterPoems = async (likeSortOrder, categoryId, language, authorId) => {
     }
     const data = await response.json();
     console.log("data: ", data);
+    return data;
   } catch (err) {
     console.error(err);
     throw new Error("Unable to load poems data.");
@@ -34,6 +35,7 @@ const fetchMostLikedPoems = async () => {
     const data = await response.json();
     const slicedData = data.slice(0, 20);
     console.log("data: ", slicedData);
+    return slicedData;
   } catch (err) {
     console.error(err);
     throw new Error("Unable to load poems data.");
@@ -51,6 +53,7 @@ const fetchLatestPoems = async () => {
     const data = await response.json();
     const slicedData = data.slice(0, 20);
     console.log("data: ", slicedData);
+    return slicedData;
   } catch (err) {
     console.error(err);
     throw new Error("Unable to load poems data.");
@@ -67,6 +70,7 @@ const fetchUserPoems = async (authorId) => {
     }
     const data = await response.json();
     console.log("data: ", data);
+    return data;
   } catch (err) {
     console.error(err);
     throw new Error("Unable to load poems data.");
@@ -82,8 +86,9 @@ const fetchUserProfileData = async (username) => {
       throw new Error("Failed to fetch users data");
     }
     const data = await response.json();
-    const user = data.filter((user) => user.username === username);
+    const user = data.find((user) => user.username === username);
     console.log("user: ", user);
+    return user;
   } catch (err) {
     console.error(err);
     throw new Error("Unable to load user data.");
@@ -115,6 +120,43 @@ const changeUsername = async (userId, newUsername) => {
   }
 };
 
+const fetchCountries = async () => {
+  try {
+    const response = await fetch(
+      `https://raw.githubusercontent.com/samayo/country-json/refs/heads/master/src/country-by-capital-city.json`
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch countries");
+    }
+
+    const data = await response.json();
+    const countries = data.map((item) => item.country);
+    return countries;
+  } catch (err) {
+    console.error(err);
+    throw new Error("Unable to fecth languages.");
+  }
+};
+
+const fetchGenres = async () => {
+  try {
+    const response = await fetch(
+      `https://raw.githubusercontent.com/samayo/country-json/refs/heads/master/src/country-by-capital-city.json`
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch genres");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error(err);
+    throw new Error("Unable to fecth genres.");
+  }
+};
+
 export {
   filterPoems,
   fetchUserPoems,
@@ -122,4 +164,6 @@ export {
   changeUsername,
   fetchMostLikedPoems,
   fetchLatestPoems,
+  fetchCountries,
+  fetchGenres,
 };

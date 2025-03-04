@@ -1,0 +1,15 @@
+.user-base-info-holder {
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-base-info-text {
+  color: #3e2723;
+  font-family: "Send Flowers", cursive;
+  font-size: 30px;
+  -webkit-text-stroke: 2px;
+}

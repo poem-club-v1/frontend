@@ -1,0 +1,30 @@
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 30px;
+  height: 30px;
+  background-color: wheat;
+  border: 2px solid black;
+  border-radius: 4px;
+  position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #3e2723;
+}

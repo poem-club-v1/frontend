@@ -1,0 +1,14 @@
+.library-buttons-display {
+  display: flex;
+  width: 70%;
+  height: fit-content;
+  padding: 3%;
+  background-color: #c5c5c5;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 4%;
+}

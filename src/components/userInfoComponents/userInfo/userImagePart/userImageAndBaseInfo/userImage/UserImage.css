@@ -1,0 +1,13 @@
+.user-image-holder {
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin-right: 2%;
+  border-radius: 50%;
+  position: relative;
+  background-color: #c9c9c9;
+  background-image: url("../../../../../../images/defaultUserImage.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border: 2px solid black;
+}

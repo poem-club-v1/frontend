@@ -1,0 +1,29 @@
+.dropdown-container {
+  width: 300%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #626262;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-dropdown-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  font-size: 60px;
+  padding: 2%;
+}
+
+.apply-filters {
+  width: 60%;
+  font-size: 40px;
+  background-color: #3e2723;
+  border-radius: 20px;
+  margin-bottom: 2%;
+}

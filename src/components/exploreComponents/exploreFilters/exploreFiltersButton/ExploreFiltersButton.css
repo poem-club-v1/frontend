@@ -1,0 +1,35 @@
+.explore-filters-button-container {
+  width: 50%;
+  padding: 2% 10%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #3e2723;
+}
+
+.explore-filters-button {
+  width: 90%;
+  background-color: #626262;
+  padding: 2% 10%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #3e2723;
+  margin-bottom: 4%;
+}
+
+.explore-filters-text {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.explore-filters-icon {
+  font-size: 40px;
+}

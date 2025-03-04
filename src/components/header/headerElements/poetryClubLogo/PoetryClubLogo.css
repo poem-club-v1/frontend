@@ -1,0 +1,11 @@
+.logo {
+  height: 80%;
+  aspect-ratio: 1/1;
+  background-image: url("../../../../images/logo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-left: 2%;
+}

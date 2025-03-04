@@ -1,0 +1,48 @@
+.nav-bar-user-setting {
+  height: 80%;
+  width: fit-content;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: 2%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  font-family: "Send Flowers", cursive;
+  font-size: 40px;
+  color: #3e2723;
+  -webkit-text-stroke: 2px;
+  cursor: default;
+}
+
+.user-image {
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin-left: 10%;
+  border-radius: 50%;
+  position: relative;
+  background-color: #c9c9c9;
+  background-image: url("../../../../images/defaultUserImage.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5%;
+  font-size: 30px;
+  color: #3e2723;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}

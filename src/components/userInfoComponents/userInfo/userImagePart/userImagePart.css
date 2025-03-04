@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap");
+
+.user-image-and-text-block {
+  width: 70%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
