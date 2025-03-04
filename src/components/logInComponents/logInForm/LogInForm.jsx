@@ -19,7 +19,7 @@ function LogInForm() {
           style={{
             cursor: `url(${loginHoverImage}), auto`,
           }}
-          onclick={`window.location.href="${process.env.REACT_APP_BACKEND_URL}/oauth2/authorization/google"`}
+          // onclick={`window.location.href="${process.env.REACT_APP_BACKEND_URL}/oauth2/authorization/google"`}
         >
           <div className="login-button-container">
             <FcGoogle size={50} />
