@@ -57,7 +57,7 @@ function ExploreDisplay() {
         setSelectedGenre={setSelectedGenre}
         setFilters={setFilters}
       />
-      <ExplorePoems />
+      <ExplorePoems filters={filters} />
     </div>
   );
 }
