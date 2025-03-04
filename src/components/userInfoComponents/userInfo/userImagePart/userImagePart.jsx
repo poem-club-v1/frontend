@@ -3,11 +3,11 @@ import "./userImagePart.css";
 import UserImage from "./userImageAndBaseInfo/userImage/UserImage";
 import UserBaseInfo from "./userImageAndBaseInfo/userBaseInfo/UserBaseInfo";
 
-function UserImagePart() {
+function UserImagePart({ userData }) {
   return (
     <div className="user-image-and-text-block">
       <UserImage />
-      <UserBaseInfo />
+      <UserBaseInfo userData={userData} />
     </div>
   );
 }

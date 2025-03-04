@@ -17,10 +17,12 @@ function ExploreFiltersDropdown({
   selectedGenre,
   setSelectedGenre,
   setFilters,
+  setIsDropdownOpen,
 }) {
   const applyFilters = () => {
     const newFilters = [selectedBox, selectedGenre, selectedCountry, username];
     setFilters(newFilters);
+    setIsDropdownOpen(false);
   };
   return (
     <div className="dropdown-container">

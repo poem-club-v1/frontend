@@ -43,6 +43,7 @@ function ExploreFiltersButton({
           selectedGenre={selectedGenre}
           setSelectedGenre={setSelectedGenre}
           setFilters={setFilters}
+          setIsDropdownOpen={setIsDropdownOpen}
         />
       )}
     </div>
